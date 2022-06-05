@@ -4,11 +4,20 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
-#include<conio>
+#include<conio.h>
 #include<iostream>
 /*
 	Libreria la cual da la extencion a stdio, como librerai standar, para el manejo de consola usando comando ch(), clrscr(). gotoxy(), textcolor(), y otras
 	stdlib es una libreria standar para el manejo de funciones de busqueda, ordenaiento, arboles, pilas, colas, lista nos sirve para las estructuras de datos
+	    clrscr()
+	        getch()
+	            getche()
+	                putch()
+	                    cgets()
+	                        cputs()
+
+	                        7. cscanf()
+	                        8. cprintf(),kbhit(),textcolor(),textbackgroun
 */
 using namespace std;
 //se define la lista de acuerdo a un nodo,accso,dato, el apuntador y su
@@ -106,4 +115,20 @@ void mostrar(void){
 	}
 	cout<<"n Fin de la lista";
 	getch();
+}
+//buscar
+int buscar(int d){
+	if(!i){
+		cout<<"\nno hay datos en la lista"<<endl;
+		getch();
+		return(0);
+	}
+	p = i;
+	a = NULL;
+	//recorre los valores de la lista
+	whie(p->s && p->i < d){
+		a=p;
+		p=p->s;
+	}
+	return(p->i==d?1:0);
 }
